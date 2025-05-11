@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBot - Your Personal Fitness Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FitBot</h1>
+            <p>Your Personal Fitness Assistant</p>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Hey there! I'm FitBot, your personal fitness assistant. How can I help you today? You can ask for workout suggestions, nutrition advice, track your progress, or get some fitness motivation!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+        
+        <div class="suggestions">
+            <p>Try asking:</p>
+            <div class="suggestion-buttons">
+                <button class="suggestion" data-text="I need a workout">I need a workout</button>
+                <button class="suggestion" data-text="What should I eat for weight loss?">Nutrition advice</button>
+                <button class="suggestion" data-text="Give me some motivation">Motivation</button>
+                <button class="suggestion" data-text="How much protein do I need?">Fitness question</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
